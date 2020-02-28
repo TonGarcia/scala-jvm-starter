@@ -4,6 +4,7 @@ Checkout other resources at: http://github.com/rockthejvm
 1. PREFER VAL instead VAR because of the side effect in functional programming
 1. "object" instead "class" private word means that is an instance of a object on runtime instead a class & extends "App" to have: "public static void main(String args[])" 
 1. Use expressions instead loops, __AVOID__ loops are for imperative programming like Java & Python not for functional programming like Scala
+1. WHEN YOU NEED LOOPS USE RECURSION INSTEAD LOOPS (look at Functions.scala how to do that)
 1. 
 
 # Installation
