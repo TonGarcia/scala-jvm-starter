@@ -23,6 +23,7 @@ Checkout other resources at: http://github.com/rockthejvm
     1. BOUNDED TYPES (subclass superclass)
         1. Garage[T <: Car](car: T)
         1. Garage[T >: Car](car: T)
+    1. While using Generics, passing a generic like T, A, B.... might use "=>" to say it generic type, like: ``` def filter(predicate: A => Boolean): MyList[A] ```
 
 
 # Installation
