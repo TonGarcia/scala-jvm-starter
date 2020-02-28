@@ -7,6 +7,8 @@ Checkout other resources at: http://github.com/rockthejvm
 1. WHEN YOU NEED LOOPS USE RECURSION INSTEAD LOOPS (look at Functions.scala how to do that)
 1. Check how recursive really works (all first recursive step is called first before compute the next step, that is why it is better than LOOPS):
 ![How recursive calls work](https://github.com/TonGarcia/scala-jvm-starter/blob/master/imgs/how_recursive_works.png?raw=true)
+1. IF MEMORY STACK OVERFLOW CHECK RECURSION.SCALA (TAIL RECURSIVE), use annotation @tailrec to check if the method is recursive
+
 
 # Installation
 
