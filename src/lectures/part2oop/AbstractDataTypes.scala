@@ -36,4 +36,5 @@ object AbstractDataTypes extends App {
   // 1- traits do not have constructor parameter
   // 2- multiple traits may be inherited by same class
   // 3- traits = behavior, abstract class (like Java interface with steroids)
+
 }
