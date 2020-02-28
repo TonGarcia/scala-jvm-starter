@@ -20,7 +20,7 @@ abstract class MyList {
 }
 
 object Empty extends MyList {
-  def head: Int = throw new NoSuchElementException // ??? means nothing
+  def head: Int = throw new NoSuchElementException // ??? means scala.Nothing (like Java.Object)
   def tail: MyList = throw new NoSuchElementException
   def isEmpty: Boolean = true
   def add(element: Int): MyList = new Cons(element, Empty)
