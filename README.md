@@ -9,6 +9,13 @@ Checkout other resources at: http://github.com/rockthejvm
 ![How recursive calls work](https://github.com/TonGarcia/scala-jvm-starter/blob/master/imgs/how_recursive_works.png?raw=true)
 1. IF MEMORY STACK OVERFLOW CHECK RECURSION.SCALA (TAIL RECURSIVE), use annotation @tailrec to check if the method is recursive
 1. Scala class = Class in any language, but changing class to object = SINGLETON INSTANCE
+1. Object can override class methods:
+    ```
+         // Object instantiation can override methods
+         val jim = new Person("Jim") {
+           override def sayHi: Unit = println(s"Hi, my name is Jim, how can I be of service?")
+         }
+    ```
 1. Generics Variance:
     1. List[+A] = yes (covariant)
     1. List[A] = no (invariant) - default
