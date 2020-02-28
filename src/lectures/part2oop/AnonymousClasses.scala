@@ -1,8 +1,5 @@
 package lectures.part2oop
 
-/**
-  * Created by Daniel.
-  */
 object AnonymousClasses extends App {
 
   abstract class Animal {
