@@ -60,4 +60,5 @@ object MethodNotations extends App {
   println(+mary.age) // 0
   println((+mary).age) // 1
 
+  println(mary likes "Inception") // used for methods with just one param
 }
