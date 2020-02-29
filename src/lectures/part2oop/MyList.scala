@@ -157,7 +157,7 @@ object ListTest extends App {
   println((listOfIntegers ++ anotherListOfIntegers).toString)
   println(listOfIntegers.flatMap(elem => new Cons(elem, new Cons(elem + 1, Empty))).toString)
 
-  println(cloneListOfIntegers == listOfIntegers)
+  println("Case class allows attrs check using equals: " + (cloneListOfIntegers == listOfIntegers))
 
   listOfIntegers.foreach(println)
   println(listOfIntegers.sort((x, y) => y - x))

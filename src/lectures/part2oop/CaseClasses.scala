@@ -8,7 +8,7 @@ object CaseClasses extends App {
 
   case class Person(name: String, age: Int)
 
-  // 1. class parameters are fields
+  // 1. case class parameters are fields, just class isn't
   val jim = new Person("Jim", 34)
   println(jim.name)
 
@@ -16,7 +16,7 @@ object CaseClasses extends App {
   // println(instance) = println(instance.toString) // syntactic sugar
   println(jim)
 
-  // 3. equals and hashCode implemented OOTB
+  // 3. equals and hashCode implemented OOTB (case class check attrs in equals, not case class just check if instances are the same
   val jim2 = new Person("Jim", 34)
   println(jim == jim2)
 
@@ -24,7 +24,7 @@ object CaseClasses extends App {
   val jim3 = jim.copy(age = 45)
   println(jim3)
 
-  // 5. CCs have companion objects
+  // 5. CCs have companion objects, case class the apply is the same as a constructor, this why new not needed
   val thePerson = Person
   val mary = Person("Mary", 23)
 

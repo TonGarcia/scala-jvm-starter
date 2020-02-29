@@ -9,6 +9,20 @@ Checkout other resources at: http://github.com/rockthejvm
 ![How recursive calls work](https://github.com/TonGarcia/scala-jvm-starter/blob/master/imgs/how_recursive_works.png?raw=true)
 1. IF MEMORY STACK OVERFLOW CHECK RECURSION.SCALA (TAIL RECURSIVE), use annotation @tailrec to check if the method is recursive
 1. Scala class = Class in any language, but changing class to object = SINGLETON INSTANCE
+1. Every Model Class might be "case":
+    ```scala
+       class Person(name: String, age: Int)
+       case class CasePerson(name: String, age: Int)
+   
+       p1 = new Person("John", 34)
+       p2 = new Person("John", 34)
+   
+       cp1 = CasePerson("John", 34)
+       cp2 = CasePerson("John", 34)
+   
+       p1ep2 = p1 == p2 //false
+       cp1ecp2 = cp1 == cp2 //true
+    ```
 1. Object can override class methods:
     ```
          // Object instantiation can override methods
