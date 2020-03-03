@@ -1,8 +1,5 @@
 package lectures.part2oop
 
-/**
-  * Created by Daniel.
-  */
 object Exceptions extends App {
 
   val x: String = null
