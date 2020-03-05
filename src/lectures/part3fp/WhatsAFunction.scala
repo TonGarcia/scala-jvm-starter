@@ -5,18 +5,24 @@ object WhatsAFunction extends App {
   // DREAM: use functions as first class elements
   // problem: oop
 
+  // customized generic class/function defined at the end of it file
   val doubler = new MyFunction[Int, Int] {
     override def apply(element: Int): Int = element * 2
   }
 
-  println(doubler(2))
+  // now doubler is an instantiable function
+  println("doubler(2): " + doubler(2))
 
   // function types = Function1[A, B]
   val stringToIntConverter = new Function1[String, Int] {
     override def apply(string: String): Int = string.toInt
   }
 
-  println(stringToIntConverter("3") + 4)
+  val stringToIntConverterSugar = new ((String) => Int) {
+    override def apply(string: String): Int = string.toInt
+  }
+
+  println("stringToIntConverter(\"3\") + 4: " + stringToIntConverter("3") + 4)
 
   val adder: ((Int, Int) => Int) = new Function2[Int, Int, Int] {
     override def apply(a: Int, b: Int): Int = a + b
@@ -47,11 +53,17 @@ object WhatsAFunction extends App {
   }
 
   val adder3 = superAdder(3)
-  println(adder3(4))
-  println(superAdder(3)(4)) // curried function
+  println("adder3(4) = 3+4: " + adder3(4))
+  println("superAdder(3)(4) = 3+4: " + superAdder(3)(4)) // curried function
 
 }
 
+// oop/java look like (not the most useful, not correctly)
+class Action {
+  def execute(element: Int): String = ???
+}
+
+// how to create a function as really functional programming
 trait MyFunction[A, B] {
   def apply(element: A): B
 }
